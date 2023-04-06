@@ -34,7 +34,7 @@ pipeline {
                     // create the service and deployment for kubernetes
                     bat "kubectl apply -f kubernetes.yaml"
                     // get the list of pods
-                    bat "kubectl get po"
+                    bat "kubectl get pods"
                     // get the service currently running
                     bat "kubectl get scv"
                     // to access the application in your localhost browser
