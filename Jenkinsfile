@@ -32,7 +32,7 @@ pipeline {
                     // start the minikube
                     bat "minikube start --force-systemd"
                     // create the service and deployment for kubernetes
-                    bat "kubectl apply -f kubernetes.yaml"
+                    bat "kubectl apply -f kubernetes.yml"
                     // get the list of pods
                     bat "kubectl get pods"
                     // get the service currently running
