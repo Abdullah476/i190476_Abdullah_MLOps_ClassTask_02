@@ -27,8 +27,10 @@ pipeline {
         stage('Deploy the image from Docker Hub to kubernetes') {
             steps {
                 script {
+                    // deleting the previous profiles
+                    bat "minikube delete --all"
                     // start the minikube
-                    bat "minikube start"
+                    bat "minikube start --force-systemd"
                     // create the service and deployment for kubernetes
                     bat "kubectl apply -f kubernetes.yaml"
                     // get the list of pods
