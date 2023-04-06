@@ -16,7 +16,7 @@ pipeline {
                         withDockerRegistry([credentialsId: "dockerhub", url: ""]) {
                             dockerImage.push()
                         }
-                        bat "docker run -d -p 8090:5000 abdullahajaz/classtask_02:latest"
+                        bat "docker run -d -p 8090:8090 abdullahajaz/classtask_02:latest"
                     }else{
                         error "Docker image build failed."
                     }
