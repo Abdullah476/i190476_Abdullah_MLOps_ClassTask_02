@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: flask-test-app
-          image: docker.io/abdullahajaz/classtask_02
+          image: docker.io/abdullahajaz/classtask_02:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8090
