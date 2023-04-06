@@ -36,7 +36,7 @@ pipeline {
                     // get the list of pods
                     bat "kubectl get pods"
                     // get the service currently running
-                    bat "kubectl get scv"
+                    bat "kubectl get svc"
                     // to access the application in your localhost browser
                     bat "minikube service flask-service"
                 }
