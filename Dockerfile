@@ -13,9 +13,6 @@ RUN pip install  --upgrade pip &&\
 
 EXPOSE 8090
 
-# Setting the environment variable for flask app
-ENV FLASK_APP = app.py
+ENTRYPOINT [ "python" ]
 
-# Command for running flask app
-CMD ["python", "-m", "flask", "run", "--host", "0.0.0.0"]
-
+CMD [ "app.py" ]
