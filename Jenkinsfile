@@ -3,7 +3,7 @@ pipeline {
     
     environment {
 
-        PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\kube"
     }
 
     stages {    
@@ -16,7 +16,7 @@ pipeline {
                         withDockerRegistry([credentialsId: "dockerhub", url: ""]) {
                             dockerImage.push()
                         }
-                        bat "docker run -d -p 8090:8090 abdullahajaz/classtask_02:latest"
+//                         bat "docker run -d -p 8090:8090 abdullahajaz/classtask_02:latest"
                     }else{
                         error "Docker image build failed."
                     }
