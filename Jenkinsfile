@@ -39,6 +39,7 @@ pipeline {
                     bat "kubectl get svc"
                     // to access the application in your localhost browser
                     // bat "minikube service flask-service"
+                    bat "minikube service flask-service --url"
                 }
             }
         }
